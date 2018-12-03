@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Start", "Start\Start.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1", "Day\Day1.csproj", "{A1DACDAD-1114-46B0-A1B8-68794C357D46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2", "Day2\Day2.csproj", "{20A54414-7242-48EC-91B1-AB80A51A551E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,26 @@ Global
 		{A1DACDAD-1114-46B0-A1B8-68794C357D46}.Release|x64.Build.0 = Release|Any CPU
 		{A1DACDAD-1114-46B0-A1B8-68794C357D46}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1DACDAD-1114-46B0-A1B8-68794C357D46}.Release|x86.Build.0 = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|x64.Build.0 = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Debug|x86.Build.0 = Debug|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|ARM.Build.0 = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|ARM64.Build.0 = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|x64.ActiveCfg = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|x64.Build.0 = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|x86.ActiveCfg = Release|Any CPU
+		{20A54414-7242-48EC-91B1-AB80A51A551E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

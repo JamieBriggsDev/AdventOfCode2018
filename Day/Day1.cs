@@ -17,7 +17,7 @@ namespace Day1
             Console.WriteLine("");
 
             // Load text file
-            string fileContent = File.ReadAllText("input.txt");
+            string fileContent = File.ReadAllText("Day1Input.txt");
             // Format input to remove white space and any '+' characters
             fileContent = fileContent.Replace("+", "");
             // Split string into an array
