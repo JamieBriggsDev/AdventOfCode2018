@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day2
+namespace Advent
 {
-    public class Day
+    public class Day2
     {
         public void Execute()
         {
@@ -17,7 +17,7 @@ namespace Day2
             Console.WriteLine("");
 
             // Load text file
-            string fileContent = File.ReadAllText("Day2Input.txt");
+            string fileContent = File.ReadAllText("Input\\Day2Input.txt");
             // Format input to remove white space and any '+' characters
             fileContent = fileContent.Replace("+", "");
             // Split string into an array

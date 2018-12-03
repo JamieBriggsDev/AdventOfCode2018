@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day1
+namespace Advent
 {
-    public class Day
+    public class Day1
     {
         public void Execute()
         {
@@ -17,7 +17,7 @@ namespace Day1
             Console.WriteLine("");
 
             // Load text file
-            string fileContent = File.ReadAllText("Day1Input.txt");
+            string fileContent = File.ReadAllText("Input\\Day1Input.txt");
             // Format input to remove white space and any '+' characters
             fileContent = fileContent.Replace("+", "");
             // Split string into an array
@@ -33,7 +33,7 @@ namespace Day1
         }
 
         // Solution to Part One
-        static int PartOne(string[] _input)
+        public int PartOne(string[] _input)
         {
             // Define output
             int output = 0;
@@ -50,7 +50,7 @@ namespace Day1
         }
 
         // Solution to Part Two
-        static int PartTwo(string[] _input)
+        private int PartTwo(string[] _input)
         {
             // Define output
             int output = 0;
@@ -82,3 +82,6 @@ namespace Day1
 
 
 }
+
+
+//"", "Joe", "Bloggs", "123", "ABC", "NE1 1AA", 0

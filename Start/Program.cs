@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Start
+namespace Advent
 {
     class Program
     {
@@ -22,6 +22,7 @@ namespace Start
                 Console.WriteLine("Pick an option:");
                 Console.WriteLine("Day\t1");
                 Console.WriteLine("Day\t2");
+                Console.WriteLine("Day\t3");
                 Console.WriteLine("\nExit\t-1");
 
                 // Take user input
@@ -37,15 +38,20 @@ namespace Start
                 {
                     case -1:
                         Console.WriteLine("Exiting..");
-                        System.Threading.Thread.Sleep(100);
+                        System.Threading.Thread.Sleep(1000);
                         break;
                     case 1:
-                        Day1.Day1 one = new Day1.Day1();
+                        Day1 one = new Day1();
                         one.Execute();
+                        
                         break;
                     case 2:
-                        Day2.Day2 two = new Day2.Day2();
+                        Day2 two = new Day2();
                         two.Execute();
+                        break;
+                    case 3:
+                        Day3 three = new Day3();
+                        three.Execute();
                         break;
                     default:
                         Console.WriteLine("Unknown value entered!");
