@@ -24,6 +24,7 @@ namespace Start
                 Console.WriteLine("Day\t2");
                 Console.WriteLine("Day\t3");
                 Console.WriteLine("Day\t4");
+                Console.WriteLine("Day\t5");
                 Console.WriteLine("\nExit\t-1");
 
                 // Take user input
@@ -57,6 +58,10 @@ namespace Start
                     case 4:
                         Day4 four = new Day4();
                         four.Execute();
+                        break;
+                    case 5:
+                        Day5 five = new Day5();
+                        five.Execute();
                         break;
                     default:
                         Console.WriteLine("Unknown value entered!");

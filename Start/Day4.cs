@@ -132,7 +132,7 @@ namespace Start
             Console.WriteLine("");
 
             // Load text file
-            string fileContent = File.ReadAllText("Input\\input.txt");
+            string fileContent = File.ReadAllText("Input\\Day4Input.txt");
             // Format input to remove white space and any '+' characters
             fileContent = fileContent.Replace("+", "");
             // Split string into an array
