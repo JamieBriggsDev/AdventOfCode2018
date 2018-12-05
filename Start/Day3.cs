@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Advent
+namespace Start
 {
     public class Day3
     {
@@ -17,7 +17,7 @@ namespace Advent
             Console.WriteLine("");
 
             // Load text file
-            string fileContent = File.ReadAllText("Input\\Day3Input.txt");
+            string fileContent = File.ReadAllText("Input\\input.txt");
             // Format input to remove white space and any '+' characters
             fileContent = fileContent.Replace("+", "");
             // Split string into an array
@@ -46,6 +46,7 @@ namespace Advent
             {
                 // Splits the line up into left, top, width and height
                 var lineSplit = line.Split(new string[] { " @ ", ",", ": ", "x" }, StringSplitOptions.RemoveEmptyEntries);
+                //int ID = int.Parse(lineSplit[0]); // Not needed
                 int left = int.Parse(lineSplit[1]);
                 int top = int.Parse(lineSplit[2]);
                 int width = int.Parse(lineSplit[3]);
@@ -58,14 +59,13 @@ namespace Advent
                         // Adds coordinate to the hashSet, if it already exists, it will
                         //  return false and the coordinate can then be added to the overlapped
                         //  coordinates
-                        if (!coordinates.Add($"{x}x{y}"))
+                        if (!coordinates.Add($"({x},{y})"))
                         {
-                            overlappedCoordinates.Add($"{x}x{y}");
+                            overlappedCoordinates.Add($"({x},{y})");
                         }
                     }
                 }
             }
-
             // Return total opverlapped coordinates
             return overlappedCoordinates.Count;
         }
@@ -94,10 +94,10 @@ namespace Advent
                         // Adds coordinate to the hashSet, if it already exists, it will
                         //  return false and the coordinate can then be added to the overlapped
                         //  coordinates
-                        if (!coordinates.Add($"{x}x{y}"))
+                        if (!coordinates.Add($"({x},{y})"))
                         {
                             //neverOverlapped = true;
-                            overlappedCoordinates.Add($"{x}x{y}");
+                            overlappedCoordinates.Add($"({x},{y})");
                         }
                     }
                 }
@@ -125,7 +125,7 @@ namespace Advent
                         // Adds coordinate to the hashSet, if it already exists, it will
                         //  return false and the coordinate can then be added to the overlapped
                         //  coordinates
-                        if (overlappedCoordinates.Contains($"{x}x{y}"))
+                        if (overlappedCoordinates.Contains($"({x},{y})"))
                         {
                             // Lets the loops know to break out of this line as the line
                             //  being checked overlaps therefore not the correct fabric
