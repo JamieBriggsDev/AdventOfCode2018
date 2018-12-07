@@ -12,6 +12,7 @@ namespace Start
         static void Main(string[] args)
         {
             int number = 0;
+            const int TotalDays = 6;
             while (number != -1)
             {
                 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -20,11 +21,10 @@ namespace Start
                 Console.WriteLine("");
                 // Display options
                 Console.WriteLine("Pick an option:");
-                Console.WriteLine("Day\t1");
-                Console.WriteLine("Day\t2");
-                Console.WriteLine("Day\t3");
-                Console.WriteLine("Day\t4");
-                Console.WriteLine("Day\t5");
+                for(int i = 1; i <= TotalDays; i++)
+                {
+                    Console.WriteLine($"Day\t{i}");
+                }
                 Console.WriteLine("\nExit\t-1");
 
                 // Take user input
@@ -45,7 +45,6 @@ namespace Start
                     case 1:
                         Day1 one = new Day1();
                         one.Execute();
-                        
                         break;
                     case 2:
                         Day2 two = new Day2();
@@ -62,6 +61,10 @@ namespace Start
                     case 5:
                         Day5 five = new Day5();
                         five.Execute();
+                        break;
+                    case 6:
+                        Day6 six = new Day6();
+                        six.Execute();
                         break;
                     default:
                         Console.WriteLine("Unknown value entered!");
