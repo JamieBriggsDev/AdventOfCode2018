@@ -12,7 +12,7 @@ namespace Start
         static void Main(string[] args)
         {
             int number = 0;
-            const int TotalDays = 6;
+            const int TotalDays = 7;
             while (number != -1)
             {
                 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -65,6 +65,10 @@ namespace Start
                     case 6:
                         Day6 six = new Day6();
                         six.Execute();
+                        break;
+                    case 7:
+                        Day7 seven = new Day7();
+                        seven.Execute();
                         break;
                     default:
                         Console.WriteLine("Unknown value entered!");
