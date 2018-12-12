@@ -5,8 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SFML;
+using SFML.Graphics;
 
 namespace Start
 {
@@ -20,19 +23,27 @@ namespace Start
             public int vX;
             public int vY;
 
+            public RectangleShape shape;
+
             public Node(int px, int py, int vx, int vy)
             {
                 pX = px;
                 pY = py;
                 vX = vx;
                 vY = vy;
+
+                shape = new RectangleShape(new SFML.Window.Vector2f(2.5f, 2.5f));
+                shape.FillColor = Color.Red;
             }
 
             public void Update()
             {
                 pX += vX;
                 pY += vY;
+
+                shape.Position = new SFML.Window.Vector2f(pX * 2.5f, pY * 2.5f);
             }
+
 
             public void Revert()
             {
@@ -75,7 +86,7 @@ namespace Start
         public void Execute()
         {
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~");
-            Console.WriteLine("~         Day 6        -");
+            Console.WriteLine("~         Day 10        -");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("");
 
@@ -94,9 +105,6 @@ namespace Start
             // Print answers
             Console.WriteLine("Finding message...");
             PartOne(lines);
-            //Console.WriteLine("Part 1 Answer:\t" + PartOne(lines).ToString());
-            //Console.WriteLine("Finding common letters...");
-            //Console.WriteLine("Part 2 Answer:\t" + PartTwo(lines).ToString());
         }
 
         //private static List<Node> positions;
@@ -120,41 +128,62 @@ namespace Start
                 Positions.Add(new Node(px, py, vx, vy));
             }
 
+            RenderWindow window = new RenderWindow(new SFML.Window.VideoMode(1280, 720), "Day 10");
+            //CircleShape cs = new CircleShape(100.0f);
+            //cs.FillColor = Color.Green;
+            window.SetActive();
+
             Application.EnableVisualStyles();
             //Application.Run(new Form10());
-            Form temp = new Form10();
-            temp.Show();
+            //Form temp = new Form10();
+            //temp.Size = new System.Drawing.Size(1280, 720);
+
+            //temp.Show();
 
             int count = 0;
+
+            //Thread.Sleep(10000);
             //int TotalSmallDistance = 0; 
-            while(true)
+            while (true)
             {
                 Positions.ForEach(a => a.Update());
 
-                //TotalSmallDistance = 
-                //    Positions.Count(a => a.SmallestDistance(Positions) <= 1);
+                //if (count % 100 == 0 && count < 10000)
+                //    Console.WriteLine($"Count: {count}");
 
-                //if (TotalSmallDistance == Positions.Count)
-                //    break;
-
-                int minY = Positions.Min(a => a.pY);
-                int maxY = Positions.Max(a => a.pY);
-
-                int numY = maxY - minY + 1;
-
-                count++;
-                if (numY == 10)
-                    break;
-
-
-                if(count > 10000)
+                if (count > 10800)
                 {
+                    //Thread.Sleep(20);
+                    //Console.ReadLine();
+                    //Console.WriteLine($"Count: {count}");
                     //if(count % 3 == 0)
-                        temp.Refresh();
+                    //temp.Refresh();
+                    window.Clear();
+                    window.DispatchEvents();
+                    foreach (var obj in Positions)
+                        window.Draw(obj.shape);
+                    window.Display();
+
+
+                    int minY = Positions.Min(a => a.pY);
+                    int maxY = Positions.Max(a => a.pY);
+
+                    int numY = maxY - minY + 1;
+
+                    if (numY <= 10)
+                        break;
                 }
 
+
+                count++;
+
+
             }
-            temp.Refresh();
+            //temp.Refresh();
+
+            Thread.Sleep(3000);
+
+            window.Close();
 
             Console.WriteLine($"Count: {count}");
 

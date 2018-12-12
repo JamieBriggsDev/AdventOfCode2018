@@ -9,7 +9,7 @@ namespace Start
 {
     class Program
     {
-        const int TotalDays = 10;
+        const int TotalDays = 11;
         static void Main(string[] args)
         {
             int number = 0;
@@ -25,6 +25,7 @@ namespace Start
                 {
                     Console.WriteLine($"Day\t{i}");
                 }
+                Console.WriteLine("\nLeaderboard\t0");
                 Console.WriteLine("\nExit\t-1");
 
                 // Take user input
@@ -41,6 +42,10 @@ namespace Start
                     case -1:
                         Console.WriteLine("Exiting..");
                         System.Threading.Thread.Sleep(600);
+                        break;
+                    case 0:
+                        Leaderboard lead = new Leaderboard();
+                        lead.GetLeaderBoard();
                         break;
                     case 1:
                         Day1 one = new Day1();
@@ -82,7 +87,10 @@ namespace Start
                         Day10 ten = new Day10();
                         ten.Execute();
                         break;
-                        
+                    case 11:
+                        Day11 eleven = new Day11();
+                        eleven.Execute();
+                        break;
                     default:
                         Console.WriteLine("Unknown value entered!");
                         break;
