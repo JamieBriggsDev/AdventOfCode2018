@@ -9,7 +9,7 @@ namespace Start
 {
     class Program
     {
-        const int TotalDays = 12;
+        const int TotalDays = 13;
         static void Main(string[] args)
         {
             int number = 0;
@@ -94,6 +94,10 @@ namespace Start
                     case 12:
                         Day12 twelve = new Day12();
                         twelve.Execute();
+                        break;
+                    case 13:
+                        Day13 thirteen = new Day13();
+                        thirteen.Execute();
                         break;
                     default:
                         Console.WriteLine("Unknown value entered!");
