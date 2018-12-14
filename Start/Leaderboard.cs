@@ -134,6 +134,8 @@ namespace Start
                         Console.Write("  ");
                 }
 
+                Console.WriteLine("");
+
                 Console.WriteLine();
                 
 

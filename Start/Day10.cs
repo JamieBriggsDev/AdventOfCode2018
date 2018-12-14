@@ -153,7 +153,7 @@ namespace Start
 
                 if (count > 10800)
                 {
-                    //Thread.Sleep(20);
+                    Thread.Sleep(20);
                     //Console.ReadLine();
                     //Console.WriteLine($"Count: {count}");
                     //if(count % 3 == 0)
