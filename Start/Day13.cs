@@ -407,7 +407,7 @@ namespace Start
 
 
 
-                if (false)
+                if (true)
                 {
                     window.Clear();
                     window.DispatchEvents();
