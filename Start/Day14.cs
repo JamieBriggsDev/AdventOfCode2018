@@ -19,9 +19,9 @@ namespace Start
     {
         //public const int INPUT = 5;
         public const int TOTAL_ELFS = 2;
-        public const int TOTAL_RECIPES = 793031;
+        public const int TOTAL_RECIPES = 9;
         public const int RECIPES_TO_FIND = 10;
-        public const bool PRINT = false; 
+        public const bool PRINT = true; 
         public class Elf
         {
             public int CurrentRecipe;

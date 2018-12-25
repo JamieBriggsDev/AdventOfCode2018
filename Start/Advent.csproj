@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Day1.cs" />
     <Compile Include="Day14.cs" />
+    <Compile Include="Day15.cs" />
     <Compile Include="DayXX.cs" />
     <Compile Include="Day13.cs" />
     <Compile Include="Day12.cs" />
@@ -84,9 +86,15 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Input\Venator.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Input\Day15Input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Input\Day13Input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
